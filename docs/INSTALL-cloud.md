@@ -1,6 +1,6 @@
-**Set up Discourse in the cloud in under 30 minutes** with zero knowledge of Rails or Linux shell. One example is [DigitalOcean][do], but these steps will work on any **Docker-compatible** cloud provider or local server.
+**Set up BayForum in the cloud in under 30 minutes** with zero knowledge of Rails or Linux shell. One example is [DigitalOcean][do], but these steps will work on any **Docker-compatible** cloud provider or local server.
 
->  🔔 Don't have 30 minutes to set this up? For a flat one-time fee of $99, the community can install Discourse in the cloud for you. [Click here to purchase a self-supported community install](https://www.literatecomputing.com/product/discourse-install/).
+>  🔔 Don't have 30 minutes to set this up? For a flat one-time fee of $99, the community can install BayForum in the cloud for you. [Click here to purchase a self-supported community install](https://www.literatecomputing.com/product/discourse-install/).
 
 ### Create New Cloud Server
 
@@ -12,7 +12,7 @@ Create your new cloud server, for example [on DigitalOcean][do]:
 
 - The default of **New York** is a good choice for most US and European audiences. Or select a region that is geographically closer to your audience.
 
-- Enter your domain `discourse.example.com` as the Droplet name.
+- Enter your domain `BayForum.example.com` as the Droplet name.
 
 Create your new Droplet. You will receive an email with the root password. (However, if you know [how to use SSH keys](https://www.google.com/search?q=digitalocean+ssh+keys), you may not need a password to log in.)
 
@@ -52,15 +52,15 @@ You will need to be root through the rest of the setup and bootstrap process.
 
 ### Domain Name
 
-> 🔔 Discourse will not work from an IP address, you must own a domain name such as `example.com` to proceed.
+> 🔔 BayForum will not work from an IP address, you must own a domain name such as `example.com` to proceed.
 
-- Already own a domain name? Great. Select a subdomain such as `discourse.example.com` or `talk.example.com` or `forum.example.com` for your Discourse instance.
+- Already own a domain name? Great. Select a subdomain such as `discourse.example.com` or `talk.example.com` or `forum.example.com` for your BayForum instance.
 
 - No domain name? We can [recommend NameCheap](https://www.namecheap.com/domains/domain-name-search/), or there are many other [great domain name registrars](https://www.google.com/search?q=best+domain+name+registrars) to choose from.
 
 - Your DNS controls should be accessible from the place where you purchased your domain name. Create a DNS A record for the `discourse.example.com` subdomain in your DNS control panel, pointing to the IP address of your cloud instance where you are installing Discourse.
 
-### Edit Discourse Configuration
+### Edit BayForum Configuration
 
 Launch the setup tool at
 
@@ -68,7 +68,7 @@ Launch the setup tool at
 
 Answer the following questions when prompted:
 
-    Hostname for your Discourse? [discourse.example.com]: 
+    Hostname for your BayForum? [discourse.example.com]: 
     Email address for admin account(s)? [me@example.com,you@example.com]: 
     SMTP server address? [smtp.example.com]: 
     SMTP port? [587]: 
@@ -78,7 +78,7 @@ Answer the following questions when prompted:
 
 This will generate an `app.yml` configuration file on your behalf, and then kicks off bootstrap. Bootstrapping takes between **2-8 minutes** to set up your Discourse. If you need to change these settings after bootstrapping, you can run `./discourse-setup` again (it will re-use your previous values from the file) or edit `/containers/app.yml` manually with `nano` and then `./launcher rebuild app`, otherwise your changes will not take effect.
 
-### Start Discourse
+### Start BayForum
 
  Once bootstrapping is complete, your Discourse should be accessible in your web browser via the domain name `discourse.example.com` you entered earlier.
 
